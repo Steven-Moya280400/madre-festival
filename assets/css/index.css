@@ -1,4 +1,10 @@
+:root{
+    --black: #1D1D1B;
+}
+
+
 *{
+    font-family: "Halenoir";
     vertical-align: baseline;
     text-decoration: none;
     -webkit-box-sizing: border-box;
@@ -23,4 +29,12 @@ header .headerContent{
     width: 100%;
     justify-content: space-between;
     padding: 48px 0;
+}
+
+.TitleSection h1{
+    margin-top: 411px;
+    color: var(--black);
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
 }
