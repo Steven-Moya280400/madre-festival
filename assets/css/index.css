@@ -1,5 +1,6 @@
 :root{
     --black: #1D1D1B;
+    --green: #00FF1A
 }
 
 
@@ -37,4 +38,53 @@ header .headerContent{
     font-size: 75px;
     font-weight: 700;
     line-height: 75px;
+}
+
+.BannerConcertSection{
+    padding: 264px 0 273px 0;
+    background-image: url(../img/banner/bannerConcert.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.BannerConcertSection .InfoBannerConcert{
+    text-align: center;
+    color: var(--green);
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.InfoSection .InfoAccorderon{
+    border: 1px solid var(--black);
+    border-right: 0;
+    border-left: 0;
+}
+
+.InfoSection .InfoAccorderon:first-of-type{
+    border-top: 2px solid var(--black);
+}
+
+.InfoSection .InfoAccorderon .accordeon{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 67.5px;
+}
+
+.InfoSection .InfoAccorderon .accordeon summary{
+    list-style: none;
+    cursor: pointer;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoArtist{
+    margin-top: 36px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoArtist img{
+    border: 3px solid var(--black);
+    border-radius: 12px;
+    height: 127px;
+    width: 177px;
+    object-fit: cover;
 }
