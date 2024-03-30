@@ -1,10 +1,9 @@
-:root{
+:root {
     --black: #1D1D1B;
     --green: #00FF1A
 }
 
-
-*{
+* {
     font-family: "Halenoir";
     vertical-align: baseline;
     text-decoration: none;
@@ -14,25 +13,35 @@
     flex-shrink: 1;
 }
 
-body{
+@keyframes ticketLoop {
+    from {
+        transform: translateX(15px);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+body {
     margin: 0;
 }
 
-.container{
+.container {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
     width: 100%;
 }
 
-header .headerContent{
+header .headerContent {
     display: inline-flex;
     width: 100%;
     justify-content: space-between;
     padding: 48px 0;
 }
 
-.TitleSection h1{
+.TitleSection h1 {
     margin-top: 411px;
     color: var(--black);
     font-size: 75px;
@@ -40,14 +49,14 @@ header .headerContent{
     line-height: 75px;
 }
 
-.BannerConcertSection{
+.BannerConcertSection {
     padding: 264px 0 273px 0;
     background-image: url(../img/banner/bannerConcert.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
- 
-.BannerConcertSection .InfoBannerConcert{
+
+.BannerConcertSection .InfoBannerConcert {
     text-align: center;
     color: var(--green);
     font-size: 75px;
@@ -55,36 +64,127 @@ header .headerContent{
     line-height: 75px;
 }
 
-.InfoSection .InfoAccorderon{
+.InfoSection .InfoAccorderon {
     border: 1px solid var(--black);
     border-right: 0;
     border-left: 0;
 }
 
-.InfoSection .InfoAccorderon:first-of-type{
+.InfoSection .InfoAccorderon:first-of-type {
     border-top: 2px solid var(--black);
 }
 
-.InfoSection .InfoAccorderon .accordeon{
+.InfoSection .InfoAccorderon .accordeon summary {
+    list-style: none;
+    cursor: pointer;
     color: var(--black);
     font-weight: 700;
     font-size: 60px;
     line-height: 67.5px;
 }
 
-.InfoSection .InfoAccorderon .accordeon summary{
-    list-style: none;
-    cursor: pointer;
+.InfoSection .InfoAccorderon .accordeon.tickets summary {
+    color: var(--green);
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoArtist{
+.InfoSection .InfoAccorderon .accordeon.tickets summary .ticketLoop {
+    display: inline-block;
+    animation: ticketLoop 20s linear infinite;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoArtist {
     margin-top: 36px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoArtist img{
+.InfoSection .InfoAccorderon .accordeon .infoArtist img {
     border: 3px solid var(--black);
     border-radius: 12px;
     height: 127px;
     width: 177px;
     object-fit: cover;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp {
+    display: inline-flex;
+    gap: 42px;
+    margin-top: 34px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp p {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56.25px;
+    margin: 0 45px 0 0;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp .itemMenuLineUp {
+    display: block;
+    border: none;
+    background-color: #0000;
+    padding: 0;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 56.25px;
+    opacity: 0.5;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp .itemMenuLineUp.active {
+    opacity: 1;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti {
+    margin: 10px 0 6px 0;
+    width: 100%;
+    display: none;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti.show {
+    display: table;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti th {
+    text-align: left;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti .th-ora {
+    width: 96px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti tbody::before {
+    content: '';
+    display: block;
+    height: 18px;
+
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti tbody td {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33.75px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLocation .titleLocation {
+    margin: 34px 0 0 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLocation .location {
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41.64px;
+}
+
+.InfoSection .InfoAccorderon .accordeon .infoLocation .imgLocation {
+    margin: 34px 0 11px 0;
+    max-width: 658px;
+    width: 100%;
+    height: auto;
 }
