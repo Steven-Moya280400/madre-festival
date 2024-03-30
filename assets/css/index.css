@@ -190,21 +190,21 @@ header .headerContent {
     height: auto;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets{
+.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets {
     margin: 19px 0 11px 0;
     display: inline-flex;
     gap: 19px;
     flex-wrap: wrap;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket{
+.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket {
     max-width: 274px;
     width: 100%;
     border: 4px solid var(--black);
     border-radius: 12px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .nameTicket{
+.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .nameTicket {
     margin: 0;
     padding: 0 10px;
     font-weight: 700;
@@ -212,7 +212,7 @@ header .headerContent {
     line-height: 61.88px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .infoTicket{
+.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .infoTicket {
     margin: 20px 0 0 0;
     padding: 0 10px;
     font-weight: 700;
@@ -220,7 +220,7 @@ header .headerContent {
     line-height: 36.45px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .buyTicket{
+.InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .buyTicket {
     margin-top: 50px;
     color: var(--white);
     background-color: var(--black);
@@ -230,4 +230,30 @@ header .headerContent {
     font-size: 55px;
     line-height: 61.88px;
     text-align: center;
+}
+
+footer {
+    background-color: var(--black);
+    padding: 512px 0 57px 0;
+}
+
+footer .footerInfo {
+    margin: 0;
+    display: block;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29.57px;
+    text-decoration: none;
+}
+
+footer .socialMedia {
+    margin-top: 65px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 156px;
+}
+
+footer .copyright {
+    margin-top: 55px;
 }
