@@ -15,6 +15,11 @@
     flex-shrink: 1;
 }
 
+*:focus,
+*:focus-visible {
+    outline: none;
+}
+
 @keyframes ticketLoop {
     from {
         transform: translateX(15px);
@@ -70,9 +75,10 @@ header .headerContent .openMenu {
 }
 
 .navMenu {
-    padding-top: 130px;
-    display: none;
+    padding: 130px 0 91px 0;
+    min-height: calc(100vh - 285px);
     width: 100%;
+    display: none;
     background-color: var(--black);
 }
 
@@ -141,7 +147,7 @@ header .headerContent .openMenu {
     display: block;
 }
 
-.navMenu .navAccorderon .accordeon .infoLocation{
+.navMenu .navAccorderon .accordeon .infoLocation {
     margin-top: 41px;
 }
 
@@ -166,6 +172,10 @@ header .headerContent .openMenu {
     font-weight: 700;
     font-size: 30px;
     line-height: 33.75px;
+}
+
+.navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap ol {
+    margin: 0;
 }
 
 .navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap .map {
@@ -284,7 +294,10 @@ main {
 }
 
 .InfoSection .InfoAccorderon .accordeon .infoArtist {
-    margin-top: 36px;
+    margin: 36px 0 11px 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .InfoSection .InfoAccorderon .accordeon .infoArtist img {
@@ -445,4 +458,207 @@ footer .socialMedia {
 
 footer .copyright {
     margin-top: 55px;
+}
+
+@media (max-width: 767.98px) {
+    .navMenu .navAccorderon .accordeon summary {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoMadreAbout {
+        margin-top: 5px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoMadreAbout .info {
+        font-size: 20px;
+        line-height: 23.66px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoArtist .artistList {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoLocation {
+        margin-top: 5px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoLocation .locationDescription {
+        font-size: 20px;
+        line-height: 23.66px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoLocation .mapContainer{
+        margin-top: 25px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap{
+        font-size: 20px;
+        line-height: 23.66px;
+        display: block;
+        position: relative;
+        min-height: 342px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap .map{
+        position: absolute;
+        top: 0;
+        height: 342px;
+        object-fit: contain;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList{
+        margin-top: 5px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket{
+        margin-bottom: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketName{
+        font-size: 30px;
+        line-height: 35.49px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketType{
+        font-size: 20px;
+        line-height: 23.66px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketDescription{
+        font-size: 17px;
+        line-height: 17.74px;
+    }
+
+    .navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .buyTicket{
+        margin-top: 5px;
+        padding: 13px 4px;
+        border-radius: 4px;
+        font-size: 20px;
+        line-height: 23.66px;
+    }
+
+    .TitleSection h1 {
+        margin-top: 178px;
+        font-size: 45px;
+        line-height: 45px;
+        word-break: break-word;
+    }
+
+    .BannerConcertSection .InfoBannerConcert {
+        font-size: 45px;
+        line-height: 45px;
+        word-break: break-word;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon summary {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoArtist {
+        margin-top: 26px;
+        gap: 11px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoArtist img {
+        width: 102px;
+        height: 73.19px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp {
+        margin-top: 25px;
+        gap: 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp p {
+        font-size: 35px;
+        line-height: 39.38px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp .itemMenuLineUp {
+        font-size: 35px;
+        line-height: 39.38px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist th {
+        font-size: 35px;
+        line-height: 39.38px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist .th-ora {
+        width: 78px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist tbody td {
+        font-size: 25px;
+        line-height: 28.13px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLocation .titleLocation {
+        margin-top: 17px;
+        font-size: 30px;
+        line-height: 33.75px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLocation .location {
+        font-size: 25px;
+        line-height: 25.58px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoLocation .imgLocation {
+        max-width: 100%;
+        margin-top: 17px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 100%;
+        border: none;
+        justify-content: flex-end;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .nameTicket {
+        font-size: 25px;
+        line-height: 20.25px;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .infoTicket {
+        font-size: 25px;
+        line-height: 20.25px;
+        margin: 0;
+    }
+
+    .InfoSection .InfoAccorderon .accordeon .infoTickets .lstTickets .cardTicket .buyTicket {
+        padding: 2px 8px;
+        margin: 0;
+        max-width: 103px;
+        width: 100%;
+        font-size: 30px;
+        line-height: 33.75px;
+        text-align: left;
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 40px 0 36px 0;
+    }
+
+    footer .footerInfo {
+        font-size: 15px;
+        line-height: 17.74px;
+    }
+
+    footer .socialMedia {
+        gap: 77px;
+    }
 }
