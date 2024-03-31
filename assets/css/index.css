@@ -1,6 +1,7 @@
 :root {
     --black: #1D1D1B;
-    --white: #fff;
+    --white: #FFF;
+    --white-light: #D9D9D9;
     --green: #00FF1A
 }
 
@@ -35,11 +36,198 @@ body {
     width: 100%;
 }
 
+header {
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navOpen header {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    overflow-y: auto;
+}
+
 header .headerContent {
     display: inline-flex;
     width: 100%;
     justify-content: space-between;
     padding: 48px 0;
+}
+
+header .headerContent .openMenu {
+    border: none;
+    background-color: #0000;
+    padding: 0;
+    cursor: pointer;
+}
+
+.navMenu {
+    padding-top: 130px;
+    display: none;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.navOpen .navMenu {
+    display: block;
+}
+
+.navMenu .navAccorderon:not(:last-of-type) {
+    margin-bottom: 19px;
+}
+
+.navMenu .navAccorderon.hide {
+    display: none;
+}
+
+.navMenu .navAccorderon.active {
+    margin-bottom: 0;
+}
+
+.navMenu .navAccorderon .accordeon summary {
+    list-style: none;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+}
+
+.navMenu .navAccorderon .accordeon .infoMadreAbout {
+    margin-top: 40px;
+}
+
+.navMenu .navAccorderon .accordeon .infoMadreAbout .info {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47.32px;
+    margin: 0;
+}
+
+.navMenu .navAccorderon .accordeon .infoArtist .artistList {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+    margin: 35px 0 0 0;
+}
+
+.navMenu .navAccorderon .accordeon .infoArtist .artistList .artistContainer {
+    position: relative;
+}
+
+.navMenu .navAccorderon .accordeon .infoArtist .artistList .tooltipArtist {
+    display: none;
+    position: absolute;
+    max-width: 246px;
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navMenu .navAccorderon .accordeon .infoArtist .artistList .artistName:hover+.tooltipArtist {
+    display: block;
+}
+
+.navMenu .navAccorderon .accordeon .infoLocation{
+    margin-top: 41px;
+}
+
+
+.navMenu .navAccorderon .accordeon .infoLocation .locationDescription {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47.32px;
+    margin: 0;
+}
+
+.navMenu .navAccorderon .accordeon .infoLocation .mapContainer {
+    margin-top: 51px;
+}
+
+.navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap {
+    display: inline-flex;
+    gap: 45px;
+    width: 100%;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33.75px;
+}
+
+.navMenu .navAccorderon .accordeon .infoLocation .mapContainer .locationsMap .map {
+    max-width: 621px;
+    width: 100%;
+    height: auto;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList {
+    margin-top: 41px;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket {
+    margin-bottom: 50px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketName {
+    margin: 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59.15px;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketType {
+    margin: 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47.32px;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .ticketInfo .ticketDescription {
+    margin: 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35.49px;
+}
+
+.navMenu .navAccorderon .accordeon .infoTickets .ticketsList .cardTicket .buyTicket {
+    display: block;
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 8px;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47.32px;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 130px;
+}
+
+.navOpen main {
+    display: none;
 }
 
 .TitleSection h1 {
@@ -129,41 +317,42 @@ header .headerContent {
     font-size: 55px;
     line-height: 56.25px;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .InfoSection .InfoAccorderon .accordeon .infoLineUp .menuLineUp .itemMenuLineUp.active {
     opacity: 1;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist {
     margin: 10px 0 6px 0;
     width: 100%;
     display: none;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti.show {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist.show {
     display: table;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti th {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist th {
     text-align: left;
     font-weight: 700;
     font-size: 40px;
     line-height: 45px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti .th-ora {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist .th-ora {
     width: 96px;
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti tbody::before {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist tbody::before {
     content: '';
     display: block;
     height: 18px;
 
 }
 
-.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtisti tbody td {
+.InfoSection .InfoAccorderon .accordeon .infoLineUp .tableArtist tbody td {
     font-weight: 700;
     font-size: 30px;
     line-height: 33.75px;

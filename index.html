@@ -8,18 +8,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="assets/fonts/Halenoir/Halenoir.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-
 </head>
 
-<body>
+<body id="bodyMadre">
     <header>
         <div class="container">
             <div class="headerContent">
-                <img src="assets/img/svg/menuIcon.svg" />
-                <img src="assets/img/svg/logo.svg" />
+
+                <button class="openMenu" onclick="openCloseNav();">
+                    <img src="assets/img/svg/menuIcon.svg" />
+                </button>
+                <a href="#">
+                    <img src="assets/img/svg/logo.svg" />
+                </a>
             </div>
         </div>
     </header>
+    <nav class="navMenu">
+        <div class="navAccorderon" id="navMadre">
+            <div class="container">
+                <details class="accordeon" onclick="openNavItem('navMadre')">
+                    <summary>MADRE/ABOUT</summary>
+                    <div class="infoMadreAbout">
+                        <p class="info">Madre festival è un evento musicale che celebra la sperimentazione e
+                            l'innovazione nella musica elettronica.</p>
+                        <p class="info">La musica è al centro dell'esperienza, ma c'è anche un'attenzione
+                            particolare per l'arte visiva e per l'esperienza immersiva, grazie all'utilizzo di luci,
+                            effetti speciali, e installazioni artistiche. Nel nostro festival il pubblico ha la
+                            possibilità di immergersi in un ambiente creativo e di scoprire nuove forme di
+                            espressione
+                            artistica, lasciandosi trasportare dalla musica e dallo spirito di comunità che si crea.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="navAccorderon" id="navArtist">
+            <div class="container">
+                <details class="accordeon" onclick="openNavItem('navArtist')">
+                    <summary>ARTISTI</summary>
+                    <div class="infoArtist">
+                        <p class="artistList">
+                            <span class="artistContainer">
+                                <span class="artistName">GRIMES</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_GRIMES.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">ARCA</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_ARCA.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">SHYGIRL</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_SHYGIRL.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">SEGABODEGA</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_SEGA BODEGA.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">EARTHEATER</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_EARTHEATER.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">BABYNINPH</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_BABYNINPH.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">METH</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_METH MATH.png" />
+                            </span>
+                            <span class="artistContainer">
+                                <span class="artistName">MATH</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_METH MATH.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">TOMMY</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_TOMMY GENESIS.png" />
+                            </span>
+                            <span class="artistContainer">
+                                <span class="artistName">GENESIS</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_TOMMY GENESIS.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">COUCOU</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_COUCOU CHLOE.png" />
+                            </span>
+                            <span class="artistContainer">
+                                <span class="artistName">CHLOE</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_COUCOU CHLOE.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">CATERINA</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_CATERINA BARBIERI.png" />
+                            </span>
+                            <span class="artistContainer">
+                                <span class="artistName">BARBIERI</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_CATERINA BARBIERI.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">OKLOU</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_OKLOU.png" />
+                            </span>-
+                            <span class="artistContainer">
+                                <span class="artistName">COBRAH</span>
+                                <img class="tooltipArtist" src="assets/img/artisti/FOTO_COBRAH.png" />
+                            </span>
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="navAccorderon" id="navLocation" >
+            <div class="container">
+                <details class="accordeon" onclick="openNavItem('navLocation')">
+                    <summary>LOCATION</summary>
+                    <div class="infoLocation">
+                        <p class="locationDescription">Residenza di campagna dei Bonaccorsi, la villa Settecentesca nel
+                            Comune di Potenza Picena rispondeva alle esigenze di una vita comoda e confortevole. Il
+                            complesso, di cui fa parte anche una chiesina barocca dedicata a S. Filippo Neri, ha assunto
+                            l’aspetto attuale sviluppandosi attorno ad un fabbricato quadrangolare a corte, costruito
+                            nella seconda metà del ‘500 come testimoniano i resti di un luogo fortificato. La villa è
+                            racchiusa da mura: alla sua destra si trova l'ingresso principale e una piccola
+                            fortificazione dove un tempo si trovava un cannone, tanto che nei vigneti circostanti è
+                            ancora oggi possibile trovare alcune palle di ferro.</p>
+                        <div class="mapContainer">
+                            <div class="locationsMap">
+                                <ol>
+                                    <li>MAIN STAGE</li>
+                                    <li>GARDEN</li>
+                                    <li>SCALE</li>
+                                    <li>TOILETTES</li>
+                                    <li>PARCHEGGIO</li>
+                                </ol>
+                                <img class="map" src="assets/img/location/map.png" />
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="navAccorderon" id="navTickets">
+            <div class="container">
+                <details class="accordeon" onclick="openNavItem('navTickets')">
+                    <summary>TICKETS</summary>
+                    <div class="infoTickets">
+                        <div class="ticketsList">
+                            <div class="cardTicket">
+                                <div class="ticketInfo">
+                                    <p class="ticketName">DAY 1</p>
+                                    <p class="ticketType">FIRST RELEASE</p>
+                                    <p class="ticketDescription">Accesso al primo giorno del festival.</p>
+                                </div>
+                                <a href="#" class="buyTicket">BUY NOW</a>
+                            </div>
+                            <div class="cardTicket">
+                                <div class="ticketInfo">
+                                    <p class="ticketName">DAY 2</p>
+                                    <p class="ticketType">FIRST RELEASE</p>
+                                    <p class="ticketDescription">Accesso al secondo giorno del festival.</p>
+                                </div>
+                                <a href="#" class="buyTicket">BUY NOW</a>
+                            </div>
+                            <div class="cardTicket">
+                                <div class="ticketInfo">
+                                    <p class="ticketName">DAY 3</p>
+                                    <p class="ticketType">FIRST RELEASE</p>
+                                    <p class="ticketDescription">Accesso al terzo giorno del festival.</p>
+                                </div>
+                                <a href="#" class="buyTicket">BUY NOW</a>
+                            </div>
+                            <div class="cardTicket">
+                                <div class="ticketInfo">
+                                    <p class="ticketName">GOLD</p>
+                                    <p class="ticketType">FIRST RELEASE</p>
+                                    <p class="ticketDescription">Accesso a tutti i giorni con pass per il backstage.</p>
+                                </div>
+                                <a href="#" class="buyTicket">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </nav>
     <main>
         <section class="TitleSection">
             <div class="container">
@@ -61,11 +232,11 @@
                         <div class="infoLineUp">
                             <div class="menuLineUp">
                                 <p>DAY</p>
-                                <button class="itemMenuLineUp active">01</button>
-                                <button class="itemMenuLineUp">02</button>
-                                <button class="itemMenuLineUp">03</button>
+                                <button id="btn_artistDay01" onclick="chanceLineUpDay('artistDay01')" class="itemMenuLineUp active">01</button>
+                                <button id="btn_artistDay02" onclick="chanceLineUpDay('artistDay02')" class="itemMenuLineUp">02</button>
+                                <button id="btn_artistDay03" onclick="chanceLineUpDay('artistDay03')" class="itemMenuLineUp">03</button>
                             </div>
-                            <table id="artistiDay01" class="tableArtisti show">
+                            <table id="artistDay01" class="tableArtist show">
                                 <thead>
                                     <th>Artista</th>
                                     <th class="th-ora">Ora</th>
@@ -89,7 +260,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <table id="artistiDay02" class="tableArtisti">
+                            <table id="artistDay02" class="tableArtist">
                                 <thead>
                                     <th>Artista</th>
                                     <th class="th-ora">Ora</th>
@@ -113,7 +284,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <table id="artistiDay03" class="tableArtisti">
+                            <table id="artistDay03" class="tableArtist">
                                 <thead>
                                     <th>Artista</th>
                                     <th class="th-ora">Ora</th>
@@ -203,6 +374,7 @@
             <p class="copyright footerInfo">©2023 MADREFESTIVAL, Tutti i diritti riservati.</p>
         </div>
     </footer>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
